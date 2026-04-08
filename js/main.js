@@ -19,17 +19,6 @@ navMenu.querySelectorAll('a').forEach(link => {
     });
 });
 
-// Program tab switching
-document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.program-day').forEach(d => d.classList.remove('active'));
-
-        btn.classList.add('active');
-        document.getElementById(btn.dataset.day).classList.add('active');
-    });
-});
-
 // Active nav link on scroll
 const sections = document.querySelectorAll('section[id]');
 window.addEventListener('scroll', () => {
